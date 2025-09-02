@@ -1,15 +1,162 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Definindo as variáveis de cor para o tema */
+        :root {
+            --cor-fundo: #121212;
+            --cor-container: #1E1E1E;
+            --cor-texto-principal: #E0E0E0;
+            --cor-texto-secundario: #B0B0B0;
+            --cor-acento-primaria: #8A2BE2; 
+            --cor-acento-secundaria: #4A90E2;
+            --cor-borda: #333333;
+        }
 
-body {
-    background-color: black;
-    height: 100 vh;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-}
-interface.img{
-    width: 100px;
-    height: auto;
- }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--cor-fundo);
+            color: var(--cor-texto-principal);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 20px;
+            background: var(--cor-container);
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--cor-borda);
+            overflow: hidden;
+        }
+
+        .cabecalho {
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="p" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="%232a2a2a"/></pattern></defs><rect width="100%" height="100%" fill="url(%23p)"/></svg>');
+        }
+        
+        
+        .logo {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            width: 200px;
+        }
+
+        .foto-perfil {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid var(--cor-acento-primaria);
+            margin: 0 auto 20px;
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.6);
+            overflow: hidden;
+        }
+
+        .foto-perfil img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Garante que a foto preencha o círculo sem distorcer */
+        }
+
+        .nome {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .titulo {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--cor-texto-secundario);
+            letter-spacing: 1px;
+        }
+
+        .conteudo {
+            padding: 50px 40px;
+        }
+
+        .secao {
+            margin-bottom: 40px;
+        }
+
+        .secao-titulo {
+            font-size: 1.8rem;
+            color: var(--cor-texto-principal);
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 3px solid var(--cor-acento-primaria);
+            padding-bottom: 10px;
+        }
+
+        .biografia {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--cor-texto-secundario);
+            text-align: justify;
+        }
+
+        .links-sociais {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .link-social {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, var(--cor-acento-primaria), var(--cor-acento-secundaria));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .link-social:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(138, 43, 226, 0.5);
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 600px) {
+            .cabecalho {
+                padding: 40px 20px;
+            }
+            .logo {
+                width: 80px;
+                top: 15px;
+                left: 15px;
+            }
+            .conteudo {
+                padding: 30px 20px;
+            }
+            .nome {
+                font-size: 2rem;
+            }
+            .foto-perfil {
+                width: 120px;
+                height: 120px;
+            }
+            .links-sociais {
+                flex-direction: column;
+                align-items: stretch;
+            }
+             .link-social {
+                justify-content: center;
+            }
+        }

@@ -3,35 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/estilo.css">
-     
-    <title>Página Pessoal</title>
+    <title>Rafael Galvão - Desenvolvedor Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <header>
-        <div class="interface">
-            <div class="logo">
-                <a href="perfil.html">
-                    <img src="imagens/gn.-SEM FUNDO-.png" alt="LOGO gn.dev"><!--Aqui chama-se a imagem da LOGO-->
-                </a><!--Aqui fecha a tag de link 'a' que permite à LOGO, ao ser clicada, retornar ao início da página.-->
-            </div><!--Aqui fecha a classe com a LOGO-->
-            <nav class="menu-desktop">
-                <ul>
-                    <li><a href="#"></a>Início</li>
-                    <li><a href="#"></a>Especialidades</li>
-                    <li><a href="#"></a>Projetos</li>
-                </ul>
-            </nav><!--Aqui fecha a tag nav 'menu-desktop'-->
-            <div class="btn-contato">
-                <button>Contato</button>
+    <div class="container">
+        <header class="cabecalho">
+            <img src="/imagens/gn.-SEM FUNDO-.png" alt="Logo GN.dev" class="logo">
+            
+            <div class="foto-perfil">
+                <img src="/imagens/Imagem Perfil.jpg" alt="Foto de Perfil de Rafael Galvão">
             </div>
-        </div><!--Aqui fecha a classe interface-->
-    </header>
-    <article>
-
-    </article>
-    <footer>
-
-    </footer>
+            
+            <h1 class="nome">Rafael Galvão</h1>
+            <h2 class="titulo">Estudante de Sistemas de Informação</h2>
+        </header>
+        
+        <main class="conteudo">
+            <section class="secao">
+                <h3 class="secao-titulo">Sobre Mim</h3>
+                <p class="biografia">
+                    Sou estudante de Sistemas de Informação no IFMA - Instituto Federal de Educação, Ciência e Tecnologia do Maranhão, onde estou descobrindo minha paixão pela tecnologia e desenvolvimento de software. 
+                    Atualmente, estou iniciando meus estudos em desenvolvimento web, focando em HTML, CSS e JavaScript como base para construir uma carreira sólida na área de tecnologia. 
+                    Embora ainda esteja no início desta jornada, estou completamente focado e determinado a evoluir constantemente, absorvendo conhecimento e praticando diariamente para aprimorar minhas habilidades. 
+                    Acredito que a dedicação e a perseverança são fundamentais para alcançar o sucesso, e estou comprometido em me tornar um desenvolvedor competente e inovador. 
+                    Meu objetivo é contribuir para projetos que façam a diferença e, futuramente, me especializar em tecnologias modernas do mercado.
+                    Além dos estudos, gosto de acompanhar as tendências tecnológicas e participar de comunidades de desenvolvedores para expandir minha rede de contatos e aprendizado.
+                </p>
+            </section>
+            
+            <section class="secao">
+                <h3 class="secao-titulo">Conecte-se Comigo</h3>
+                <div class="links-sociais">
+                    <a href="#" class="link-social">LinkedIn</a>
+                    <a href="#" class="link-social">GitHub</a>
+                    <a href="#" class="link-social">Twitter</a>
+                    <a href="#" class="link-social">Email</a>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
